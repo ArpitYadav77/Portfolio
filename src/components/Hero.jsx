@@ -48,7 +48,7 @@ const socialLinks = [
 ];
 
 const infoPills = [
-  { emoji: "📍", label: "LOCATION", value: "Bangalore, Karnataka (originally from Bareilly)" },
+  { emoji: "📍", label: "CURRENTLY", value: "Patiala, Punjab (Open to opportunities in Gurgaon or Pune)" },
   { emoji: "🎓", label: "STUDENT", value: "Final-year B.Tech, ECE, Thapar Institute of Engineering & Technology (TIET)" },
   { emoji: "💡", label: "INTERESTS", value: "Trading, DSA, Building things" },
 ];
