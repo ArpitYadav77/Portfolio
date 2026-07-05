@@ -13,16 +13,16 @@ const educationEntries = [
       "Relevant coursework — DSA, OOP, DBMS, Computer Networks; focus on full-stack development & AI",
   },
   {
-    title: "Senior Secondary Education",
+    title: "Senior Secondary School",
     institution: "DAV Public School, Patiala",
     date: "2021 - 2023",
-    bullet: "CBSE Board — 92.4%",
+    bullet: "CBSE Board — 92.4% (Mr. DAV)",
   },
   {
-    title: "Secondary Education",
-    institution: "Army Public School, Bareilly",
+    title: "Secondary School",
+    institution: "DAV Public School, Patiala",
     date: "2019 - 2021",
-    bullet: "CBSE Board — 95.2%",
+    bullet: "CBSE Board — 92%",
   },
 ];
 
