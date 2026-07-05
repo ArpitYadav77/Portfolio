@@ -115,7 +115,7 @@ export default function Skills() {
               >
                 {/* Category Label Pill */}
                 <span
-                  className="brutal-pill inline-flex items-center gap-2 text-white font-body font-bold text-sm mb-5 transition-colors duration-150 hover:!bg-brutal-green hover:!text-white cursor-pointer select-none"
+                  className="brutal-pill inline-flex items-center gap-2 text-white font-serif italic font-bold text-sm mb-5 transition-colors duration-150 hover:!bg-brutal-green hover:!text-white cursor-pointer select-none"
                   style={{ backgroundColor: category.color }}
                 >
                   <Icon className="w-4 h-4" />
