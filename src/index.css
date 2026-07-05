@@ -1,0 +1,249 @@
+@import "tailwindcss";
+
+/* ============================================
+   NEO-BRUTALIST DESIGN SYSTEM
+   ============================================ */
+
+@theme {
+  /* --- Section Colors --- */
+  --color-sky-bg: #5B9BF5;
+  --color-hero-white: #FFFFFF;
+  --color-hero-yellow: #FFE156;
+  --color-experience-purple: #D4BFFF;
+  --color-skills-pink: #FFB5C2;
+  --color-projects-mustard: #FFD93D;
+  --color-blogs-blue-white: #E8F0FE;
+  --color-education-mint: #A8E6CF;
+  --color-hackathons-coral: #FF6B6B;
+  --color-coding-yellow: #FFE156;
+  --color-beyondcode-purple: #B28DFF;
+
+  /* --- Core Colors --- */
+  --color-brutal-black: #000000;
+  --color-brutal-white: #FFFFFF;
+  --color-brutal-navy: #1A1A2E;
+  --color-brutal-green: #2ECC71;
+  --color-brutal-red: #FF6B6B;
+
+  /* --- Shadows --- */
+  --shadow-brutal: 6px 6px 0px #000000;
+  --shadow-brutal-sm: 4px 4px 0px #000000;
+  --shadow-brutal-lg: 8px 8px 0px #000000;
+  --shadow-brutal-hover: 8px 8px 0px #000000;
+  --shadow-neo: 6px 6px 0px #000000;
+  --shadow-neo-sm: 4px 4px 0px #000000;
+
+  /* --- Fonts --- */
+  --font-display: 'Archivo Black', sans-serif;
+  --font-body: 'Space Grotesk', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  /* --- Borders --- */
+  --border-brutal: 3px solid #000000;
+  --radius-inner: 14px;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: var(--font-body);
+    background-color: var(--color-sky-bg);
+    color: var(--color-brutal-black);
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+    letter-spacing: -0.02em;
+  }
+
+  code, pre, .font-mono {
+    font-family: var(--font-mono);
+  }
+}
+
+/* ============================================
+   SCROLLBAR
+   ============================================ */
+
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-brutal-black);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-hero-yellow);
+  border: 2px solid var(--color-brutal-black);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-brutal-green);
+}
+
+/* ============================================
+   SELECTION
+   ============================================ */
+
+::selection {
+  background: var(--color-hero-yellow);
+  color: var(--color-brutal-black);
+}
+
+/* ============================================
+   MARQUEE ANIMATION
+   ============================================ */
+
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  animation: marquee 20s linear infinite;
+}
+
+/* ============================================
+   DIAGONAL STRIPES PATTERN
+   ============================================ */
+
+.stripe-pattern {
+  background-image: repeating-linear-gradient(
+    -45deg,
+    transparent,
+    transparent 8px,
+    rgba(0,0,0,0.08) 8px,
+    rgba(0,0,0,0.08) 16px
+  );
+}
+
+/* ============================================
+   TERMINAL CURSOR BLINK
+   ============================================ */
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+.cursor-blink {
+  animation: blink 1s step-end infinite;
+}
+
+/* ============================================
+   TYPEWRITER
+   ============================================ */
+
+@keyframes typewriter {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+/* ============================================
+   CANVAS DOODLE PAD
+   ============================================ */
+
+.doodle-canvas {
+  cursor: crosshair;
+  touch-action: none;
+}
+
+/* ============================================
+   UTILITY CLASSES
+   ============================================ */
+
+.brutal-card {
+  border: 3px solid #000;
+  box-shadow: 6px 6px 0px #000;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.brutal-card:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 8px 8px 0px #000;
+}
+
+.brutal-btn {
+  border: 3px solid #000;
+  box-shadow: 4px 4px 0px #000;
+  font-family: var(--font-display);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  cursor: pointer;
+  transition: transform 0.1s ease, box-shadow 0.1s ease;
+}
+
+.brutal-btn:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0px #000;
+}
+
+.brutal-btn:active {
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0px #000;
+}
+
+.brutal-pill {
+  border: 2px solid #000;
+  border-radius: 9999px;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.25rem 0.75rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  white-space: nowrap;
+}
+
+.browser-dots::before {
+  content: '';
+  display: flex;
+  gap: 6px;
+  padding: 10px 14px;
+}
+
+/* ============================================
+   RESPONSIVE HELPERS
+   ============================================ */
+
+@media (max-width: 768px) {
+  .brutal-card {
+    box-shadow: 4px 4px 0px #000;
+  }
+  
+  .brutal-card:hover {
+    box-shadow: 6px 6px 0px #000;
+  }
+}
+
+/* ============================================
+   CUSTOM HOVER CURSOR
+   ============================================ */
+body, a, button, [role="button"], select, .cursor-pointer, input[type="submit"], input[type="button"], .brutal-btn, * {
+  cursor: none !important;
+}
+
+.cursor {
+  position: fixed;
+  pointer-events: none;
+  transform: translate(-2px, -2px);
+  z-index: 9999;
+}
+
+@media (hover: none) {
+  .cursor {
+    display: none;
+  }
+  body, a, button, [role="button"], select, .cursor-pointer, input[type="submit"], input[type="button"], .brutal-btn, * {
+    cursor: auto !important;
+  }
+}
