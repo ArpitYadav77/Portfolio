@@ -115,7 +115,7 @@ export default function Skills() {
               >
                 {/* Category Label Pill */}
                 <span
-                  className="brutal-pill inline-flex items-center gap-2 text-white font-body font-bold text-sm mb-5"
+                  className="brutal-pill inline-flex items-center gap-2 text-white font-body font-bold text-sm mb-5 transition-colors duration-150 hover:!bg-brutal-green hover:!text-white cursor-pointer select-none"
                   style={{ backgroundColor: category.color }}
                 >
                   <Icon className="w-4 h-4" />
@@ -127,7 +127,7 @@ export default function Skills() {
                   {category.skills.map((skill) => (
                     <span
                       key={skill}
-                      className={`brutal-pill text-sm font-body font-medium text-brutal-black ${category.tint}`}
+                      className={`brutal-pill text-sm font-body font-medium text-brutal-black transition-colors duration-150 cursor-pointer hover:bg-brutal-green hover:text-white select-none ${category.tint}`}
                     >
                       {skill}
                     </span>
