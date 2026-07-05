@@ -270,7 +270,6 @@ export default function Terminal() {
             value={inputValue}
             onChange={(e) => setInputValue(e.target.value)}
             onKeyDown={handleKeyDown}
-            onBlur={focusInput}
             className="absolute opacity-0 w-0 h-0 pointer-events-none"
             aria-label="Terminal command input"
             autoComplete="off"
