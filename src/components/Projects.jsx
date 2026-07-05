@@ -42,23 +42,10 @@ const projects = [
     ],
   },
   {
-    title: "Wizard Portfolio",
-    description: "Harry Potter themed developer portfolio",
-    tags: ["HTML", "CSS", "JavaScript", "Canvas", "Framer Motion"],
-    link: "https://my-portfolio-87k8.vercel.app/",
-    live: true,
-    bullets: [
-      "Immersive Harry Potter themed portfolio with custom magical interactive effects",
-      "Interactive magic wand custom cursor with canvas particles",
-      "Dynamic house-themed section navigation",
-      "Highly responsive custom styling and animations",
-    ],
-  },
-  {
     title: "ETL + RAG Pipeline",
     description: "Automated data pipeline with semantic search",
     tags: ["Airflow", "MinIO", "PostgreSQL", "ChromaDB", "LangChain", "FastAPI"],
-    link: "#",
+    link: "https://github.com/ArpitYadav77",
     live: false,
     bullets: [
       "Automated ETL pipeline with GitHub Actions orchestration",
