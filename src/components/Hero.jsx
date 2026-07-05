@@ -41,10 +41,10 @@ const childFadeUp = {
 };
 
 const socialLinks = [
-  { icon: FiMail, href: "#", label: "Email" },
-  { icon: FiGithub, href: "https://github.com/ArpitYadav77", label: "GitHub" },
-  { icon: FiLinkedin, href: "#", label: "LinkedIn" },
-  { icon: FiTwitter, href: "#", label: "Twitter" },
+  { icon: FiMail, href: "#", label: "Email", hoverClass: "hover:bg-[#FF6B6B] hover:text-white" },
+  { icon: FiGithub, href: "https://github.com/ArpitYadav77", label: "GitHub", hoverClass: "hover:bg-[#24292e] hover:text-white" },
+  { icon: FiLinkedin, href: "https://www.linkedin.com/in/arpit-yadav1/", label: "LinkedIn", hoverClass: "hover:bg-[#0077b5] hover:text-white" },
+  { icon: FiTwitter, href: "#", label: "Twitter", hoverClass: "hover:bg-[#1da1f2] hover:text-white" },
 ];
 
 const infoPills = [
@@ -136,14 +136,14 @@ export default function Hero() {
 
             {/* Social Icons */}
             <motion.div className="flex gap-4" variants={childFadeUp}>
-              {socialLinks.map(({ icon: Icon, href, label }) => (
+              {socialLinks.map(({ icon: Icon, href, label, hoverClass }) => (
                 <a
                   key={label}
                   href={href}
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={label}
-                  className="w-12 h-12 border-3 border-brutal-black bg-brutal-white flex items-center justify-center text-brutal-black text-2xl transition-all duration-100 hover:translate-x-[-2px] hover:translate-y-[-2px] hover:shadow-[6px_6px_0px_#000] shadow-[4px_4px_0px_#000]"
+                  className={`w-12 h-12 border-3 border-brutal-black bg-brutal-white flex items-center justify-center text-brutal-black text-2xl transition-all duration-100 hover:translate-x-[-2px] hover:translate-y-[-2px] hover:shadow-[6px_6px_0px_#000] shadow-[4px_4px_0px_#000] ${hoverClass}`}
                 >
                   <Icon />
                 </a>
