@@ -89,6 +89,9 @@ const cardVariants = {
 };
 
 export default function Projects() {
+  const leftColProjects = projects.filter((_, index) => index % 2 === 0);
+  const rightColProjects = projects.filter((_, index) => index % 2 === 1);
+
   return (
     <div className="w-full max-w-5xl mx-auto px-6 mt-16">
       <section
@@ -108,75 +111,149 @@ export default function Projects() {
           </motion.h2>
 
           {/* Card Grid */}
-          <motion.div
-            className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8"
-            variants={containerVariants}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, margin: "-60px" }}
-          >
-            {projects.map((project) => (
-              <motion.div
-                key={project.title}
-                variants={cardVariants}
-                className="brutal-card bg-brutal-white p-6 relative group hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-[8px_8px_0_#000] transition-all duration-200"
-              >
-                {/* External Link Icon — top-right */}
-                {project.link && project.link !== "#" ? (
-                  <a
-                    href={project.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="absolute top-4 right-4 text-brutal-black hover:text-brutal-navy transition-colors"
-                    aria-label={`Open ${project.title}`}
-                  >
-                    <FiExternalLink className="w-5 h-5" />
-                  </a>
-                ) : (
-                  <span className="absolute top-4 right-4 text-gray-400">
-                    <FiExternalLink className="w-5 h-5" />
-                  </span>
-                )}
-
-                {/* Title */}
-                <h3 className="font-display text-xl text-brutal-black pr-8">
-                  {project.title}
-                </h3>
-
-                {/* Live Project Pill */}
-                {project.live && (
-                  <span className="brutal-pill inline-flex items-center mt-3 bg-[#2ECC71] text-white border-2 border-black text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide">
-                    Live Project
-                  </span>
-                )}
-
-                {/* Tech Stack Tags */}
-                <div className="flex flex-wrap gap-2 mt-4">
-                  {project.tags.map((tag) => (
-                    <span
-                      key={tag}
-                      className="brutal-pill font-mono text-xs border-2 border-black rounded-full px-3 py-1 bg-brutal-white text-brutal-navy"
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8 items-start">
+            {/* Left Column */}
+            <motion.div
+              className="flex flex-col gap-6 lg:gap-8"
+              variants={containerVariants}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, margin: "-60px" }}
+            >
+              {leftColProjects.map((project) => (
+                <motion.div
+                  key={project.title}
+                  variants={cardVariants}
+                  className="brutal-card bg-brutal-white p-6 relative group hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-[8px_8px_0_#000] transition-all duration-200"
+                >
+                  {/* External Link Icon — top-right */}
+                  {project.link && project.link !== "#" ? (
+                    <a
+                      href={project.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="absolute top-4 right-4 text-brutal-black hover:text-brutal-navy transition-colors"
+                      aria-label={`Open ${project.title}`}
                     >
-                      {tag}
+                      <FiExternalLink className="w-5 h-5" />
+                    </a>
+                  ) : (
+                    <span className="absolute top-4 right-4 text-gray-400">
+                      <FiExternalLink className="w-5 h-5" />
                     </span>
-                  ))}
-                </div>
+                  )}
 
-                {/* Bullet Points */}
-                <ul className="mt-5 space-y-2">
-                  {project.bullets.map((bullet, i) => (
-                    <li
-                      key={i}
-                      className="font-body text-sm text-brutal-black flex items-start gap-2"
+                  {/* Title */}
+                  <h3 className="font-display text-xl text-brutal-black pr-8">
+                    {project.title}
+                  </h3>
+
+                  {/* Live Project Pill */}
+                  {project.live && (
+                    <span className="brutal-pill inline-flex items-center mt-3 bg-[#2ECC71] text-white border-2 border-black text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide">
+                      Live Project
+                    </span>
+                  )}
+
+                  {/* Tech Stack Tags */}
+                  <div className="flex flex-wrap gap-2 mt-4">
+                    {project.tags.map((tag) => (
+                      <span
+                        key={tag}
+                        className="brutal-pill font-mono text-xs border-2 border-black rounded-full px-3 py-1 bg-brutal-white text-brutal-navy"
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+
+                  {/* Bullet Points */}
+                  <ul className="mt-5 space-y-2">
+                    {project.bullets.map((bullet, i) => (
+                      <li
+                        key={i}
+                        className="font-body text-sm text-brutal-black flex items-start gap-2"
+                      >
+                        <span className="mt-1.5 w-1.5 h-1.5 min-w-[6px] rounded-full bg-brutal-black" />
+                        {bullet}
+                      </li>
+                    ))}
+                  </ul>
+                </motion.div>
+              ))}
+            </motion.div>
+
+            {/* Right Column */}
+            <motion.div
+              className="flex flex-col gap-6 lg:gap-8"
+              variants={containerVariants}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, margin: "-60px" }}
+            >
+              {rightColProjects.map((project) => (
+                <motion.div
+                  key={project.title}
+                  variants={cardVariants}
+                  className="brutal-card bg-brutal-white p-6 relative group hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-[8px_8px_0_#000] transition-all duration-200"
+                >
+                  {/* External Link Icon — top-right */}
+                  {project.link && project.link !== "#" ? (
+                    <a
+                      href={project.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="absolute top-4 right-4 text-brutal-black hover:text-brutal-navy transition-colors"
+                      aria-label={`Open ${project.title}`}
                     >
-                      <span className="mt-1.5 w-1.5 h-1.5 min-w-[6px] rounded-full bg-brutal-black" />
-                      {bullet}
-                    </li>
-                  ))}
-                </ul>
-              </motion.div>
-            ))}
-          </motion.div>
+                      <FiExternalLink className="w-5 h-5" />
+                    </a>
+                  ) : (
+                    <span className="absolute top-4 right-4 text-gray-400">
+                      <FiExternalLink className="w-5 h-5" />
+                    </span>
+                  )}
+
+                  {/* Title */}
+                  <h3 className="font-display text-xl text-brutal-black pr-8">
+                    {project.title}
+                  </h3>
+
+                  {/* Live Project Pill */}
+                  {project.live && (
+                    <span className="brutal-pill inline-flex items-center mt-3 bg-[#2ECC71] text-white border-2 border-black text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide">
+                      Live Project
+                    </span>
+                  )}
+
+                  {/* Tech Stack Tags */}
+                  <div className="flex flex-wrap gap-2 mt-4">
+                    {project.tags.map((tag) => (
+                      <span
+                        key={tag}
+                        className="brutal-pill font-mono text-xs border-2 border-black rounded-full px-3 py-1 bg-brutal-white text-brutal-navy"
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+
+                  {/* Bullet Points */}
+                  <ul className="mt-5 space-y-2">
+                    {project.bullets.map((bullet, i) => (
+                      <li
+                        key={i}
+                        className="font-body text-sm text-brutal-black flex items-start gap-2"
+                      >
+                        <span className="mt-1.5 w-1.5 h-1.5 min-w-[6px] rounded-full bg-brutal-black" />
+                        {bullet}
+                      </li>
+                    ))}
+                  </ul>
+                </motion.div>
+              ))}
+            </motion.div>
+          </div>
         </div>
       </section>
     </div>
