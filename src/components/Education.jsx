@@ -16,7 +16,7 @@ const educationEntries = [
     title: "Senior Secondary School",
     institution: "DAV Public School, Patiala",
     date: "2021 - 2023",
-    bullet: "CBSE Board — 92.4% (Mr. DAV)",
+    bullet: "CBSE Board — Mr. DAV",
   },
   {
     title: "Secondary School",
