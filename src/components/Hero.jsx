@@ -119,7 +119,9 @@ export default function Hero() {
               variants={childFadeUp}
             >
               <a
-                href="#"
+                href="https://my-portfolio-87k8.vercel.app/"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="brutal-btn bg-brutal-green text-brutal-white px-2.5 lg:px-4 py-3 flex items-center justify-center gap-1.5 text-xs lg:text-sm font-bold flex-1"
               >
                 <FiDownload className="text-lg" />

@@ -6,8 +6,8 @@ const projects = [
     title: "FlowGrid",
     description: "Role-based service booking platform",
     tags: ["React", "Node.js", "MySQL", "JWT", "Razorpay"],
-    link: "#",
-    live: false,
+    link: "https://flowgrid.vercel.app/",
+    live: true,
     bullets: [
       "Role-based booking flow with customer and provider dashboards",
       "JWT authentication with secure session management",
@@ -19,7 +19,7 @@ const projects = [
     title: "Phatak Radar",
     description: "Real-time railway crossing monitoring",
     tags: ["React", "Node.js", "Leaflet", "In-memory State"],
-    link: "https://phatak-radar.vercel.app",
+    link: "https://phatak-radar.vercel.app/",
     live: true,
     bullets: [
       "Real-time railway crossing monitoring and status map",
@@ -32,8 +32,8 @@ const projects = [
     title: "Auto Insights",
     description: "AI-powered analytics platform",
     tags: ["MERN", "FastAPI", "OpenAI GPT-4o"],
-    link: "#",
-    live: false,
+    link: "https://auto-insights-psi.vercel.app/",
+    live: true,
     bullets: [
       "AI-powered analytics platform with natural language querying",
       "FastAPI microservice for AI/ML processing layer",
@@ -42,11 +42,24 @@ const projects = [
     ],
   },
   {
+    title: "Wizard Portfolio",
+    description: "Harry Potter themed developer portfolio",
+    tags: ["HTML", "CSS", "JavaScript", "Canvas", "Framer Motion"],
+    link: "https://my-portfolio-87k8.vercel.app/",
+    live: true,
+    bullets: [
+      "Immersive Harry Potter themed portfolio with custom magical interactive effects",
+      "Interactive magic wand custom cursor with canvas particles",
+      "Dynamic house-themed section navigation",
+      "Highly responsive custom styling and animations",
+    ],
+  },
+  {
     title: "ETL + RAG Pipeline",
     description: "Automated data pipeline with semantic search",
     tags: ["Airflow", "MinIO", "PostgreSQL", "ChromaDB", "LangChain", "FastAPI"],
     link: "#",
-    live: true,
+    live: false,
     bullets: [
       "Automated ETL pipeline with GitHub Actions orchestration",
       "Vector search powered by ChromaDB for semantic retrieval",
